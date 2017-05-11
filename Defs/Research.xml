@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Research>
+  <ResearchProjectDef>
+    <defName>FarmingSprinklers</defName>
+    <label>sprinklers</label>
+    <techLevel>Industrial</techLevel>
+    <baseCost>2000</baseCost>
+    <description>Learn how to create sprinklers for a slight increase in plant growth.</description>
+    <prerequisites>
+      <li>Machining</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>AutomaticFarming</defName>
+    <label>automatic farming</label>
+    <techLevel>Spacer</techLevel>
+    <baseCost>3000</baseCost>
+    <description>Learn how to create cultivators which can automatically take care of a medium-sized plot of farmland.</description>
+    <prerequisites>
+      <li>FarmingSprinklers</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+</Research>
