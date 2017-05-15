@@ -195,7 +195,7 @@ namespace CultivatorTools
         public override bool DoIterationWork(IntVec3 c)
         {
             var plant = c.GetPlant(Map);
-            if (plant != null)
+            if (plant != null && !Map.reservationManager.IsReserved(plant, Faction))
             {
                 var rate = GetGrowthRatePerTickFor(plant);
                 plant.Growth += rate * 2500;//Growth sped up by 1hr
