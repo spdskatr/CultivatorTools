@@ -44,7 +44,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
+        <startElectricalFires>false</startElectricalFires>
         <basePowerConsumption>500</basePowerConsumption>
       </li>
     </comps>
