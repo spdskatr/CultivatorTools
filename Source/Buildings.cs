@@ -18,7 +18,7 @@ namespace CultivatorTools
         #region Abstract stuff
         public override int TickRate => def.GetModExtension<CultivatorDefModExtension>()?.TickFrequencyDivisor ?? 200;
 
-        public override bool CellValidator(IntVec3 c) => Utilities.GetIPlantToGrowSettable(c, Map) != null;
+        public override bool CellValidator(IntVec3 c) => base.CellValidator(c) && (Utilities.GetIPlantToGrowSettable(c, Map)?.CanPlantRightNow() ?? false);
 
         public override bool DoIterationWork(IntVec3 c)
         {
@@ -189,7 +189,7 @@ namespace CultivatorTools
         public override int TickRate => 50;
         public override bool CellValidator(IntVec3 c)
         { 
-            return c.GetPlant(Map) != null;
+            return base.CellValidator(c) && c.GetPlant(Map) != null;
         }
 
         public override bool DoIterationWork(IntVec3 c)

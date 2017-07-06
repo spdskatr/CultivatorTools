@@ -91,7 +91,10 @@ namespace CultivatorTools
                 }
             }
         }
-        public abstract bool CellValidator(IntVec3 c);
+        public virtual bool CellValidator(IntVec3 c)
+        {
+            return c.InBounds(Map);
+        }
 
         public abstract bool DoIterationWork(IntVec3 c);
     }
